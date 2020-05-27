@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>두 수를 입력받아 4칙연산의 결과를 표시해 봅시다.</h2>
-    <p id = 'demo1'>
-    </p>
-    <p id = 'demo2'> 
-    </p>
-    <p id = 'demo3'> 
-    </p>
-    <p id = 'demo4'> 
-    </p>
-    <p id = 'demo5'> 
-    </p>
-    <script>
-        var a = Number(prompt('Input first number'));
-        var b = Number(prompt('Input second number'));
-
-        var c = a + b;
-        var d = a - b;
-        var e = a * b;
-        var f = a / b;
-
-        document.getElementById('demo1').innerHTML = 'a = ' + a + ', ' + 'b = ' + b ;
-        document.getElementById('demo2').innerHTML = a + ' + ' + b + ' = ' + c;
-        document.getElementById('demo3').innerHTML = a + ' - ' + b + ' = ' + d;
-        document.getElementById('demo4').innerHTML = a + ' * ' + b + ' = ' + e;
-        document.getElementById('demo5').innerHTML = a + ' / ' + b + ' = ' + f;
-         
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>두 수를 입력받아 4칙연산의 결과를 표시해 봅시다.</h2>
+        <p id = 'demo1'></p>
+        <p id = 'demo2'></p>
+        <p id = 'demo3'></p>
+        <p id = 'demo4'></p>
+        <p id = 'demo5'></p>
+        <script>
+            var a = Number(prompt('Input first number'));
+            var b = Number(prompt('Input second number'));
+    
+            var c = a + b;
+            var d = a - b;
+            var e = a * b;
+            var f = a / b;
+    
+            document.getElementById('demo1').innerHTML = 'a = ' + a + ', ' + 'b = ' + b ;
+            document.getElementById('demo2').innerHTML = a + ' + ' + b + ' = ' + c;
+            document.getElementById('demo3').innerHTML = a + ' - ' + b + ' = ' + d;
+            document.getElementById('demo4').innerHTML = a + ' * ' + b + ' = ' + e;
+            document.getElementById('demo5').innerHTML = a + ' / ' + b + ' = ' + f;
+            
+        </script>
+    </body>
 </html>
