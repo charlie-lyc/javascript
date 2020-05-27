@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>섭씨를 입력받아서 화씨로 바꾸는 프로그램을 작성해 봅시다.</h2>
+        <p id='demo'></p>
+    </body>
+</html>
+<script>
+    var c = Number(prompt('Input Celsius'));
+
+    var f = c * (9/5) + 32;
+
+    document.getElementById('demo').innerHTML = 'Celsius ' + c + ' is ' + 'Fahrenheit ' + f; 
+</script>
