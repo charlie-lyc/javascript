@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 연습문제 [2] -->
+  <!-- prime numbers : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 -->
+  <h2>사용자가 입력한 숫자가 소수(약수가 1과 자기자신 뿐인 자연수)인지 아닌지 알려주는 프로그램</h2>
+
+  <script type="text/javascript">
+    var num = 0;
+    while (num < 2) {
+      num = Number(prompt('Input number'));
+    }
+    // Teacher's code :
+    var isPrime = true;
+    for (var i = 2; i < num; i++) {
+      if (num % i == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      console.log(num + '은 소수입니다.');
+      document.write(num + '은 소수입니다.');
+    } else {
+      console.log(num + '은 소수가 아닙니다.');
+      document.write(num + '은 소수가 아닙니다.');
+    }
+    // My code :
+    // var count = 0;
+    // for (var i = 1; i < num+1; i++) {
+    //   if (num % i == 0) {
+    //     count++;
+    //   }
+    // }
+    // if (count == 2) {
+    //   console.log('Input number "' + num + '" is a Prime Number.');
+    //   document.write('Input number "' + num + '" is a Prime Number.');
+    // } else {
+    //   console.log('Input number "' + num + '" is NOT a prime number.');
+    //   document.write('Input number "' + num + '" is NOT a prime number.');
+    // }
+  </script>
+</body>
+
+</html>

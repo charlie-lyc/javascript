@@ -1,0 +1,36 @@
+<!-- "!" and "tab" -->
+<!-- "html" and "enter" -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>IF 구문 TEST</h2>
+  <p id='demo'></p>
+
+  <script type="text/javascript">
+    var str = prompt('Input number');
+    var num = Number(str);
+    var demo = document.getElementById('demo')
+    // conditional statement
+    if (num > 5) {
+      console.log(num + ' is Greater than 5');
+      demo.innerHTML = 'Input number ' + num + ' is Greater than 5';
+    } else if (num == 5) {
+      console.log(num + ' is Equal to 5');
+      demo.innerHTML = 'Input number ' + num + ' is Equal to 5';
+    } else {
+      console.log(num + ' is Less than 5');
+      demo.innerHTML = 'Input number ' + num + ' is Less than 5';
+    }
+  </script>
+
+</body>
+
+</html>

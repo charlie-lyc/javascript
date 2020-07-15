@@ -1,0 +1,33 @@
+<!-- 예제 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 예제 -->
+  <h2>1에서 n까지 짝수의 합을 구하는 프로그램</h2>
+
+  <script type="text/javascript">
+    var num = 0;
+    while (num <= 0) {
+      num = Number(prompt('Input number'));
+    }
+    var sum = 0;
+    for (var i = 0; i < num + 1; i += 2) {
+      if (i % 2 == 0) {
+        sum += i;
+      }
+    }
+    console.log('Sum of even numbers from 1 to "' + num + '" is "' + sum + '.');
+    document.write('Sum of even numbers from 1 to "' + num + '" is "' + sum + '".');
+  </script>
+
+</body>
+
+</html>

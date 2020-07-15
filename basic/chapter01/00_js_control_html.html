@@ -1,0 +1,29 @@
+<!-- JavaScript makes HTML dynamic -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>자바스크립트 연습장</h2>
+  <p id='demo'></p>
+
+  <script>
+    var demo = document.getElementById('demo');
+    // present date and time
+    demo.innerHTML = Date();
+    demo.style.color = 'red';
+    var size = 10;
+
+    function big() {
+      size += 1;
+      demo.style.fontSize = size + 'px';
+    }
+    setInterval(big, 100);
+  </script>
+
+</body>
+
+</html>

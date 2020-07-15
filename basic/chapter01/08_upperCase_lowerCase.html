@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 예제 -->
+  <h2>입력받은 문자가 대문자로 된 문장인지, 소문자로 된 문장인지, 아니면 보통문장인지 확인해주는 프로그램</h2>
+  <p id='demo'></p>
+
+  <script type="text/javascript">
+    var str = prompt('Input string');
+    var upper_str = str.toUpperCase();
+    var lower_str = str.toLowerCase();
+    var demo = document.getElementById('demo');
+    if (str == upper_str) {
+      console.log('Input string is upper case.');
+      demo.innerHTML = 'Input string "' + str + '" is upper case.';
+    } else if (str == lower_str) {
+      console.log('Input string is lower case.');
+      demo.innerHTML = 'Input string "' + str + '" is lower case.';
+    } else {
+      console.log('Input string is general case.');
+      demo.innerHTML = 'Input string "' + str + '" is general case.';
+    }
+  </script>
+
+</body>
+
+</html>

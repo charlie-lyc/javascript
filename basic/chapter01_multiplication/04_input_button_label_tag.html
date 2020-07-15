@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>구구단을 화면에 출력하되 웹페이지에서 단을 입력받아 출력한다.</h2>
+  <!-- w3schools.com -->
+  <label for="multi_num">구구단 몇단을 출력할까요?</label>
+  <input type="text" id="num"><br>
+  <button onclick="Multiplication()" type="button">확인</button><br>
+
+  <script type="text/javascript">
+    function Multiplication() {
+      var num = document.getElementById('num').value;
+      console.log(num, '단');
+      document.write('<h2>', num, '단', '</h2>');
+      for (var i = 1; i < 10; i++) {
+        console.log(num, '*', i, '=', num * i);
+        document.write(num, ' * ', i, ' = ', num * i, '<br>');
+      }
+    }
+  </script>
+
+</body>
+
+</html>
