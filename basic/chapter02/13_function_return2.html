@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>return을 이용해수 함수를 종료하고 이중 loop 한번에 벗어나기</h2>
+
+  <script type="text/javascript">
+    // 함수안에 넣고 return을 사용하면 함수가 종료되면서, 한번에 이중 loop를 벗어난다.
+    var foo = function () {
+      for (var i = 0; i < 10; i++) {
+        for (var j = 0; j < 10; j++) {
+          if (i == 5 && j == 3) {
+            return;
+          }
+          console.log(i, j);
+        }
+      }
+    };
+    foo();
+
+    // break는 이중 loop에서 한번만 벗어난다. 그리고 나머지 loop는 계속 진행된다.
+    // for (var i = 0; i < 10; i++) {
+    //   for (var j = 0; j < 10; j++) {
+    //     if (i == 5 && j == 3) {
+    //       break;
+    //     }
+    //     console.log(i, j);
+    //   }
+    // }
+  </script>
+
+</body>
+
+</html>

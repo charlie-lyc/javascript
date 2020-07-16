@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 연습문제 [2]-->
+  <h2>객체와 메소드를 사용해서, 1에서 100사이의 소수를 화면에 출력하는 프로그램을 작성해 봅시다.</h2>
+
+  <script type="text/javascript">
+    // Teacher's code
+    // 1. 객체 생성
+    var numbers = {};
+    // 2. all 속성
+    numbers.all = [];
+    // 3. prime 속성
+    numbers.prime = [];
+    // 4. addAll 메소드
+    numbers.addAll = function (max_num) {
+      for (var i = 1; i < max_num + 1; i++) {
+        this.all.push(i);
+      }
+    };
+    // 5. isPrime 메소드
+    numbers.isPrime = function (number) {
+      if (number == 1) {
+        return false;
+      } else if (number == 2) {
+        return true;
+      }
+      for (var i = 2; i < number; i++) {
+        if (number % i == 0) {
+          return false;
+        }
+      }
+      return true;
+    };
+    // 6. addPrime 메소드
+    numbers.addPrime = function (number) {
+      this.prime.push(number);
+    };
+    // 7. getAllPrime 메소드
+    numbers.getAllPrime = function () {
+      console.log(this.prime);
+    };
+    // 8. JavaScript 본 코드
+    numbers.addAll(100);
+    for (var i = 0; i < numbers.all.length; i++) {
+      var is_prime = numbers.isPrime(numbers.all[i]);
+      if (is_prime) {
+        numbers.addPrime(numbers.all[i]);
+      }
+    }
+    numbers.getAllPrime();
+    // 9. 웹페이지 출력
+    for (var i = 0; i < numbers.prime.length; i++) {
+      document.write(numbers.prime[i], '<br>');
+    }
+
+    // My code
+    // var primeNumber = {};
+    // primeNumber.start = 1;
+    // primeNumber.end = 100;
+    // primeNumber.get = function() {
+    //   for (var i = this.start; i < this.end + 1; i++) {
+    //     if (i == 1) {
+    //       continue;
+    //     } else if (i == 2) {
+    //       console.log(i, '은 소수입니다.');
+    //       document.write(i, ' 은 소수입니다.', '<br>');
+    //       continue;
+    //     }
+    //     for (var j = 2; j < i; j++) {
+    //       if (i % j == 0) {
+    //         break;
+    //       } else if (j == i - 1) {
+    //         console.log(i, '은 소수입니다.');
+    //         document.write(i, ' 은 소수입니다.', '<br>');
+    //     }
+    //   }
+    // }
+    // console.log(primeNumber.start);
+    // console.log(primeNumber.end);
+    // primeNumber.get();
+  </script>
+
+</body>
+
+</html>

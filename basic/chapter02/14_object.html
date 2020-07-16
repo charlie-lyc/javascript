@@ -1,0 +1,63 @@
+<!-- Object
+1. 현실의 물체에 대응되는 개념
+2. 객체를 사용하면 변수와 함수를 묶어서 관리
+3. 객체는 속성과 메소드를 가짐
+
+# 객체 만들기
+p1 = {};
+{}
+
+typeof p1;
+"object"
+
+# 객체의 속성
+p1.name = 'Young';
+"Young"
+
+p1.name;
+"Young"
+
+console.log(p1.name);
+Young
+undefined
+
+p1;
+{name: "Young"}
+
+# 객체의 메소드
+p1.eat = function (food) {
+  console.log(food + '를 먹습니다.')
+};
+ƒ (food) {
+  console.log(food + '를 먹습니다.')
+}
+
+p1;
+{name: "Young", eat: ƒ}
+
+p1.eat('사과');          <== 'p1이 사과를 먹습니다.' 영어문장처럼 직관적.
+사과를 먹습니다.
+undefined
+
+# 만약 메소드 대신 함수를 쓴다면
+var eat = function (p1, food) {
+  console.log(p1 + '이 ' + food + '를 먹습니다.')
+};
+undefined
+
+eat('Young', '사과');    <== 영어문장처럼 금방 읽혀지지 않는다.
+Young이 사과를 먹습니다.
+undefined
+
+######################################
+객체지향 프로그래밍을 하면,
+1. 유지보수가 쉬워진다.
+2. 가독성이 높아진다.
+3. 대형 프로그램을 짜기 쉬워진다.
+
+객체지향 프로그래밍을 어떻게 할까?
+1. 객체와 객체가 협력해서 일을 한다.
+2. 객체는 일에 책임을 진다.
+3. 객체는 객체에 메시지를 보낸다.
+4. 객체는 자율적으로 일을 한다.
+ -->

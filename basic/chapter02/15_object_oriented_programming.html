@@ -1,0 +1,48 @@
+<!-- Object Oriented Programming
+var p2 = {};
+p2.name = 'Crong';
+p2.weight = 80;
+p2.say = function (word) {
+  console.log(this.name + ' says, ' + word);
+};
+ƒ (word) {
+  console.log(this.name + ' says, ' + word);
+}
+
+p2;
+{name: "Crong", weight: 80, say: ƒ}
+
+p2.name;
+"Crong"
+
+p2.weight;
+80
+
+p2.say('Hello');
+Crong says, Hello
+undefined
+
+p2.name = 'Young';
+"Young"
+
+p2.weight = 70;
+70
+
+p2;
+{name: "Young", weight: 70, say: ƒ}
+
+p2.eat = function (food) {
+  console.log(this.name + '이 ' + food + '를 먹습니다.')
+};
+ƒ (food) {
+  console.log(this.name + '이 ' + food + '를 먹습니다.')
+}
+
+p2;
+{name: "Young", weight: 70, say: ƒ, eat: ƒ}
+
+p2.eat('사과');
+Young이 사과를 먹습니다.
+undefined
+
+ -->

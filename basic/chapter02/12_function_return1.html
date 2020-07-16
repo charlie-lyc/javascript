@@ -1,0 +1,37 @@
+<!-- Function : return
+
+var five = function () {
+  return 5;
+};
+undefined
+
+five();
+5
+
+*** 함수를 종료하는데 사용 *** : 이것은 마치 loop에서 'break'를 사용하는 것과 비슷
+var test = function (text) {
+    if (text == 'exit') {
+        return;
+  }
+  console.log('보이나요?')
+};
+undefined
+
+test('hoho');
+보이나요?
+undefined
+
+test('exit');
+undefined
+
+#############################
+함수를 사용하면,
+1. 가독성이 좋아진다.
+2. 유지보수가 편해진다.
+
+함수를 어떻게 만들까?
+1. 줄 수가 지나치게 길어지면 함수로(10줄 정도)
+2. 인덴트가 지나치게 깊어져도 함수로
+3. 매개변수와 리턴을 적극적으로 활용
+4. 함수 1개는 반드시 한가지 기능만 하도록
+ -->
