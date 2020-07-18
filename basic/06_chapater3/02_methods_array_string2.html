@@ -1,0 +1,76 @@
+<!-- Methods of Array and String [2]: 대부분 메소드를 실행하여도 객체에는 변화가 없다.!!!
+
+var a = [1,2,3,4,5];
+undefined
+
+var s = 'hello';
+undefined
+
+a.indexOf(3);
+2
+
+// index값을 배열에 대입시켜 확인
+a[2];
+3
+
+a.push(2);
+6
+
+a;
+(6) [1, 2, 3, 4, 5, 2]
+
+// 앞에서 부터 찾는다.
+a.indexOf(2);
+1
+
+// 뒤에서 부터 찾는다.
+a.lastIndexOf(2)
+5
+
+// 해당 배열에 찾는 대상이 없음.
+a.indexOf(100);
+-1
+
+if (a.indexOf(100) == -1) {
+  console.log('Not Exists')
+}
+Not Exists
+undefined
+
+// slice(start, end index)
+a.slice(2, 4);
+(2) [3, 4]
+
+a;
+(6) [1, 2, 3, 4, 5, 2]
+
+var a3 = a.slice(2, 4);
+undefined
+
+a3;
+(2) [3, 4]
+
+s.slice(2, 4);
+"ll"
+
+s;
+"hello"
+
+var s4 = s.slice(2, 4);
+undefined
+
+s4;
+"ll"
+
+// splice(start index, number) *** 객체에 변화가 있다!!! ***
+a.splice(4, 2);
+(2) [5, 2]
+
+a;
+(4) [1, 2, 3, 4]
+
+// Uncaught TypeError: s.splice is not a function *** 문자열에는 실행이 안된다!!! ***
+s.splice(3, 2);
+
+
+ -->

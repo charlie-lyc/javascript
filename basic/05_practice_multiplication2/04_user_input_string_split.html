@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>사용자가 입력한 문자열을 받아 해당되는 구구단을 구현한다.</h2>
+  <label>몇 단을 출력할까요? 여러개일 경우 ','으로 구분해서 입력하세요.</label><br>
+  <input type="text" id="userInput"><br>
+  <button onclick="main()" type="button">확인</button>
+
+  <script type="text/javascript">
+    var getNumber = function() {
+      var userInput = document.getElementById('userInput').value;
+      var num = userInput.split(',');
+      return num;
+    }
+    var getMulti = function(num) {
+      var result = [];
+      for (var i = 1; i < 10; i++) {
+        result.push(num * i);
+      }
+      return result;
+    }
+    var printMulti = function(num, result) {
+      document.write('<h2>' + num + '단' + '</h2>');
+      for (var i = 0; i < result.length; i++) {
+        console.log(num + ' * ' + (i + 1) + ' = ' + result[i]);
+        document.write(num + ' * ' + (i + 1) + ' = ' + result[i] + '<br>');
+      }
+    }
+    var main = function() {
+      var num = getNumber();
+      for (var i = 0; i < num.length; i++) {
+        var result = getMulti(num[i]);
+        printMulti(num[i], result);
+      }
+    }
+  </script>
+
+</body>

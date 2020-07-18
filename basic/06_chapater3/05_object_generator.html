@@ -1,0 +1,97 @@
+<!-- Object Generator [1]
+1. 객체는 유지보수를 쉽게 하기 위해 속성과 메소드들을 묶어 놓은 것이다.
+var p1 = {
+  'name': 'honux',
+  'eat': function (food) {};
+}
+
+2. 비슷한 객체를 여러개 만들 때 객체를 생성하는 함수를 이용한다.
+3. 이때 객체를 생성하는 함수를 '생성자''라고 한다.
+4. 생성자는 관례상 대부분 대문자로 시작한다.
+
+var Human = function (name, hp, power) {
+  this.name = name;
+  this.hp = hp;
+  this.power = power;
+  this.attack = function (target) {
+    console.log(this.name + '이 ' + target.name + '을 공격했다.');
+    target.hp -= this.power;
+  };
+  this.show = function () {
+    console.log('%s %d %d', this.name, this.hp, this.power);
+  };
+};
+undefined
+
+Human;
+ƒ (name, hp, power) {
+  this.name = name;
+  this.hp = hp;
+  this.power = power;
+  this.attack = function (target) {
+    console.log(this.name + '이 ' + target.name + '을 공격했다.');
+    target.hp -= this.po…
+
+Human();
+undefined
+
+var player = Human();
+undefined
+
+player;
+undefined
+
+###########################################
+
+var player1 = new Human('Young', 100, 10);
+undefined
+
+player1;
+Human {name: "Young", hp: 100, power: 10, attack: ƒ, show: ƒ}
+
+var monster1 = new Human('Crong', 200, 1);
+undefined
+
+monster1;
+Human {name: "Crong", hp: 200, power: 1, attack: ƒ, show: ƒ}
+
+player1.attack(monster1);
+Young이 Crong을 공격했다.
+undefined
+
+// hp 200 -> 190
+monster1.show()
+Crong 190 1
+undefined
+
+monster1.attack(player1);
+Crong이 Young을 공격했다.
+undefined
+
+// hp 100 -> 99
+player1.show();
+Young 99 10
+undefined
+
+#########################################
+
+var Food = function (name, energy) {
+  this.name = name;
+  this.energy = energy;
+  this.feed = function (human) {
+    human.hp += this.energy;
+  };
+};
+undefined
+
+var donut = new Food('donut', 30);
+undefined
+
+donut.feed(player1);
+undefined
+
+// hp 100 -> 129
+player1.show()
+VM172:10 Young 129 10
+undefined
+ -->

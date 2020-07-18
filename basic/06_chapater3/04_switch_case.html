@@ -1,0 +1,56 @@
+<!-- Switch Case
+1. 변수에 저장된 값에 따라 각각 다른 코드를 실행하는 분기문입니다.
+2. 상황에 따라 if와  else if를 반복적으로 써야 하는 상황을 피하게 해 줍니다.
+
+var value;
+switch (value) {
+  case value1:
+  // value == value1 일경우 실행할 코드
+  break;
+  case value2:
+  // value == value2 일경우 실행할 코드
+  break;
+  default:
+  // 위의 어느 경우에도 해당되지 않을 때 실행할 코드
+}
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    var score = Number(prompt('점수를 입력하세요.'))
+    // switch case statement
+    switch (score) {
+      case 10:
+      console.log('A')
+      break;
+      case 9:
+      console.log('B')
+      break;
+      default:
+      console.log('C')
+    }
+
+    // if statement
+    // if (score == 10) {
+    //   console.log('A')
+    // } else if (score == 9) {
+    //   console.log('B')
+    // } else {
+    //   console.log('C')
+    // }
+  </script>
+
+</body>
+
+</html>

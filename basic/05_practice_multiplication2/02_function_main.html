@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>함수를 이용해 구구단을 구현하고, main 함수를 사용해 본다.</h2>
+
+  <script type="text/javascript">
+    // 입력한 숫자에 해당되는 구구단 결과를 얻는 함수
+    var getMulti = function (num) {
+      var result = [];
+      for (var i = 1; i < 10; i++) {
+        result.push(num * i);
+      }
+      return result;
+    };
+    // getMulti()를 통해 얻은 결과를 출력하는 함수
+    var printMulti = function (num, result) {
+      document.write('<h2>' + num + '단' + '</h2>');
+      for (var i = 0; i < result.length; i++) {
+        console.log(num + ' * ' + (i+1) + ' = ' + result[i]);
+        document.write(num + ' * ' + (i+1) + ' = ' + result[i] + '<br>');
+      }
+    };
+    // main() 함수
+    var main = function () {
+      for (var i = 2; i < 10; i++) {
+        var result = getMulti(i);
+        printMulti(i, result);
+      }
+    };
+    // 실행
+    main();
+  </script>
+
+</body>
+
+</html>

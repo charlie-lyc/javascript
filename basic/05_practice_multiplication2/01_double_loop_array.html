@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>이중반복문을 이용해 구구단을 구현하고, 구구단 결과를 배열에 저장 후 결과를 출력</h2>
+
+  <script type="text/javascript">
+    var results = [];
+    for (var i = 2; i < 10; i++) {
+      results.push('<h2>' + i + '단' + '</h2>');
+      for (var j = 1; j < 10; j++) {
+        // '+'를 이용해 문자열을 결합할 때, 숫자연산 데이터는 문자열로 인식 되지 않기 위해서 괄호로 묶어준다. (i*j)
+        results.push(i + ' * ' + j + ' = ' + (i * j));
+      }
+    }
+    for (var i = 0; i < results.length; i++) {
+      console.log(results[i]);
+      document.write(results[i], '<br>');
+    }
+  </script>
+
+</body>
+
+</html>

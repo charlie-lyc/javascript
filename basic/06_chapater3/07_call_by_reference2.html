@@ -1,0 +1,52 @@
+<!-- Call by Reference [2]
+
+3. 참조변수의 동작방식 이해하기
+1) 참조 변수라는 것은 객체에 대한 별명 같은 것이다.
+2) 즉, 변수에 생성된 객체의 참조를 할당하는 것이다. : C언어에서의 '포인터' 개념
+
+var m1 = {name: "honux", age: 25};
+var m2 = m1;
+undefined
+
+m1 == m2;
+true
+
+m2.name = "crong";
+"crong"
+
+m1 == m2;
+true           <== 이상하다???
+
+m2;
+{name: "crong", age: 25}   <== 분명히 m2의 이름만 변경했는데...
+
+m1;
+{name: "crong", age: 25}   <== m1의 이름도 변경됐다!!! 이것이 *** 참조변수 ***
+
+######################################################################
+
+var arr1 = [1, 2, 3, 4, 5];
+var arr2 = arr1;
+undefined
+
+arr2.push(6);
+6
+
+arr1 == arr2;
+true
+
+arr2;
+(6) [1, 2, 3, 4, 5, 6]
+
+arr1;
+(6) [1, 2, 3, 4, 5, 6]
+
+var p1 = {};
+var p2 = p1;
+undefined
+
+p2.name = 'young';
+p1==p2;
+true
+
+-->

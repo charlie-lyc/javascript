@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>객체와 메소드를 이용해 구구단을 구현하고, main 메소드로 프로그램을 시작한다.</h2>
+
+  <script type="text/javascript">
+    // 객체 생성
+    var multiTable = {};
+    // 메소드 생성
+    multiTable.getMulti = function (num) {
+      var result = [];
+      for (var i = 1; i < 10; i++) {
+        result.push(num * i);
+      }
+      return result;
+    };
+    multiTable.printMulti = function (num, result) {
+      document.write('<h2>' + num + '단' + '</h2>');
+      for (var i = 0; i < result.length; i++) {
+        console.log(num + ' * ' + (i+1) + ' = ' + result[i]);
+        document.write(num + ' * ' + (i+1) + ' = ' + result[i] + '<br>');
+      }
+    };
+    var main = function () {
+      for (var i = 2; i < 10; i++) {
+        var result = multiTable.getMulti(i);
+        multiTable.printMulti(i, result);
+      }
+    };
+    // 실행
+    main();
+  </script>
+
+</body>

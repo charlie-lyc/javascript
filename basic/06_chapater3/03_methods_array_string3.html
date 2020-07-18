@@ -1,0 +1,49 @@
+<!-- Methods of Array and String [3]: 대부분 메소드를 실행하여도 객체에는 변화가 없다.!!!
+var s = 'hello, world, a-b-c';
+undefined
+
+// 아무런 옵션 없이 문자열 객체에 split()실행하면 배열로 반환
+s.split();
+["hello, world, a-b-c"]
+
+var a = s.split();
+undefined
+
+a;
+["hello, world, a-b-c"]
+
+// 아무런 옵션 없이 배열 객체에 join()실행하면 문자열로 반환
+a.join()
+"hello, world, a-b-c"
+
+s.split(',');
+(3) ["hello", " world", " a-b-c"]
+
+s.split('-');
+(3) ["hello, world, a", "b", "c"]
+
+s.split(' ');
+(3) ["hello,", "world,", "a-b-c"]
+
+s.split('l');
+(4) ["he", "", "o, wor", "d, a-b-c"]
+
+s.split('ll');
+(2) ["he", "o, world, a-b-c"]
+
+s.length;
+19
+
+var s1 = s.split('');
+undefined
+
+s1;
+(19) ["h", "e", "l", "l", "o", ",", " ", "w", "o", "r", "l", "d", ",", " ", "a", "-", "b", "-", "c"]
+
+s1.length;
+19
+
+s1.join('');
+"hello, world, a-b-c"
+
+ -->
