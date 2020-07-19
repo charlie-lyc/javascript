@@ -1,0 +1,83 @@
+<!-- Call by Value / Call by Reference
+
+4. 함수 호출시의 변수
+
+1) 값 전달 : 함수내부에서 값이 바뀌어도 외부에서는 그대로
+// Call by Value
+var foo_v = function (v) {
+  v = v * 2;
+  console.log(v);
+}
+var a = 10;
+undefined
+
+a;
+10
+
+foo_v(a);
+20
+
+a;
+10   <== 값을 전달하는 변수의 경우 함수의 영향을 받지 않고 전역변수의 영향을 받음.
+
+2)참조 전달 : 함수 내부에서 값이 바뀌면 외부의 객체도 바뀐다.
+// Call by Reference
+var foo_r = function (ref) {
+  ref.v = ref.v * 2;
+  console.log(ref);
+}
+var p = {name: 'Dora', v: 99};
+undefined
+
+p;
+{name: "Dora", v: 99}
+
+foo_r(p);
+{name: "Dora", v: 198}
+
+p;
+{name: "Dora", v: 198}   <== 참조를 전달하는 변수의 경우 함수의 영향을 받음
+
+#################################################################
+
+var p1 = {name:'Young', weight: 75};
+undefined
+
+var diet = function (person) {
+  person.weight -= 1;
+};
+undefined
+
+diet(p1);
+undefined
+
+p1;
+{name: "Young", weight: 74}
+
+diet(p1);
+undefined
+
+p1;
+{name: "Young", weight: 73}
+
+diet(p1);
+undefined
+
+p1;
+{name: "Young", weight: 72}
+
+#########################################
+
+var arr1 = [1, 2, 3, 4, 5];
+var append = function (arr, v) {
+  arr.push(v);
+};
+undefined
+
+append(arr1,10);
+undefined
+
+arr1;
+(6) [1, 2, 3, 4, 5, 10]
+
+-->

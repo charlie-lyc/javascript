@@ -1,0 +1,105 @@
+<!-- Object & Array
+1. 객체의 속성값이 배열이 될 수 있다.
+2. 배열 내의 값들이 객체가 될 수 있다.
+
+var m1 = {'no': 1, 'scores': [100, 99]};
+var m2 = {'no': 2, 'scores': [100, 99]};
+var arr1 = [m1, m2];
+undefined
+
+m1;
+{no: 1, scores: Array(2)}
+
+m2;
+{no: 2, scores: Array(2)}
+
+arr1;
+(2) [{…}, {…}]
+
+############################################
+var Human = function (name, atk) {
+  this.name = name;
+  this.hp = 100;
+  this.pow = atk;
+};
+var p1 = new Human('Young', 10);
+Human.prototype.attack = function (target) {
+  target.hp -= this.pow;
+};
+ƒ (target) {
+  target.hp -= this.pow;
+}
+
+p1.items = ['sword', 'shield', 'portion'];
+(3) ["sword", "shield", "portion"]
+
+p1;
+Human {name: "Young", hp: 100, pow: 10, items: Array(3)}
+
+p1.items[0];
+"sword"
+
+p1.items[1];
+"shield"
+
+p1.items[2];
+"portion"
+
+var p2 = new Human('Crong', 1);
+undefined
+
+p2;
+Human {name: "Crong", hp: 100, pow: 1}
+
+var arr1 = [p1, p2];
+undefined
+
+arr1;
+(2) [Human, Human]
+
+arr1[0];
+Human {name: "Young", hp: 100, pow: 10, items: Array(3)}
+
+arr1[1];
+Human {name: "Crong", hp: 100, pow: 1}
+
+arr1[1].hp = 200;
+200
+
+arr1[1];
+Human {name: "Crong", hp: 200, pow: 1}
+
+var p3 = new Human('Pobi', 5);
+undefined
+
+p3;
+Human {name: "Pobi", hp: 100, pow: 5}
+
+p1.friends = [p2, p3];
+(2) [Human, Human]
+
+p1;
+Human {name: "Young", hp: 100, pow: 10, items: Array(3), friends: Array(2)}
+
+p1.friends[0];
+Human {name: "Crong", hp: 200, pow: 1}
+
+p1.friends[1];
+Human {name: "Pobi", hp: 100, pow: 5}
+
+p3.friends = p1;
+Human {name: "Young", hp: 100, pow: 10, items: Array(3), friends: Array(2)}
+
+p3;
+Human {name: "Pobi", hp: 100, pow: 5, friends: Human}
+
+p1.friends[1];
+Human {name: "Pobi", hp: 100, pow: 5, frineds: Human}
+
+p1.friends[1].friends;
+Human {name: "Young", hp: 100, pow: 10, items: Array(3), friends: Array(2)}
+
+p1.friends[1].friends.friends[0];
+Human {name: "Crong", hp: 200, pow: 1}
+
+ -->
