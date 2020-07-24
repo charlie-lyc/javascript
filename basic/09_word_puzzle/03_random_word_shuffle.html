@@ -1,0 +1,43 @@
+<!-- 알고리즘 문제 (https://www.acmicpc.net/problem/15501)를 게임으로 구현 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen">
+    input {
+      width: 300px;
+      height: 35px;
+      font-size: 20px;
+    }
+
+    button {
+      width: 90px;
+      height: 35px;
+    }
+
+    div>button {
+      width: 45px;
+      height: 35px;
+      font-size: 25px;
+      margin: 1px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <h3>10개 정도의 단어에서 무작위로 고른뒤, 해당 문자들의 위치를 무작위로 섞는 기능 구현</h3><br>
+  <div id='output1'></div><br>
+  <button onclick="reverseBtns()" id="reverseBtn" type="button">뒤집기</button>
+  <button onclick="rotateBtnsL()" id="rotateBtnL" type="button">밀어내기(L)</button>
+  <button onclick="rotateBtnsR()" id="rotateBtnR" type="button">밀어내기(R)</button><br><br>
+  <div id='output2'></div><br>
+
+  <script src="random_word_shuffle.js" charset="utf-8"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!-- Scope : 변수의 유효 범위
+
+1. 전역 변수 : 함수 외부에서 선언된 변수
+- 많이 쓰면 좋지 않다.
+- 가급적 사용하지 않는게 좋다.
+
+var a = 10;
+console.log(a);
+10
+undefined
+
+
+2. 지역 변수 : 함수 안에서 선언된 변수
+- 외부에서 사용할 수 없다.
+
+var foo = function () {
+  var b = 25;
+  console.log(a);
+  console.log(b);
+};
+foo();
+10
+25
+undefined
+
+b;
+Uncaught ReferenceError: b is not defined
+
+
+3. 자동 전역 변수 : 함수 안에서 var 없이 선언하면 자동 전역 변수가 된다.
+- 하지만 절대 이렇게 사용하면 안 된다!!!
+
+var foo2 = function () {
+  c = 50;
+  console.log(c);
+};
+foo2();
+50
+
+c;
+50
+
+
+4. 매개변수의 스코프 : 함수의 매개 변수는 자동으로 지역 변수 취급
+- 지역변수 개념과 비슷하다.
+
+var foo3 = function (v) {
+  console.log(v);
+};
+foo3(100);
+100
+undefined
+
+v;
+Uncaught ReferenceError: v is not defined
+
+ -->

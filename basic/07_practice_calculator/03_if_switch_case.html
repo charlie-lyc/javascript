@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2>2개의 숫자 값과 사칙연산 기호 중 하나를 입력 받은 후 연산 및 결과 출력</h2>
+  <label>첫번째 숫자 </label><input id='input1' type="text"><br>
+  <label>두번째 숫자 </label><input id='input2' type="text"><br>
+  <label>사칙연산 기호 </label><input id='input3' type="text"><br>
+  <button onclick="calcInput()" type="button">실행</button><br>
+  <div id='output'></div>
+
+  <script type="text/javascript">
+    var calcInput = function () {
+      var input1 = Number(document.getElementById('input1').value);
+      var input2 = Number(document.getElementById('input2').value);
+      var input3 = document.getElementById('input3').value;
+      var str = '<br>';
+
+      if (input3 === '+') {
+        console.log(input1, '+', input2, '=', input1 + input2);
+        str += input1 + ' + ' + input2 + ' = ' + (input1 + input2) + '<br>';
+      } else if (input3 === '-') {
+        console.log(input1, '-', input2, '=', input1 - input2);
+        str += input1 + ' - ' + input2 + ' = ' + (input1 - input2) + '<br>';
+      } else if (input3 === '*') {
+        console.log(input1, '*', input2, '=', input1 * input2);
+        str += input1 + ' * ' + input2 + ' = ' + (input1 * input2) + '<br>';
+      } else {
+        console.log(input1, '/', input2, '=', input1 / input2);
+        str += input1 + ' / ' + input2 + ' = ' + (input1 / input2);
+      }
+
+      // switch (input3) {
+      //   case '+':
+      //     console.log(input1, '+', input2, '=', input1 + input2);
+      //     str += input1 + ' + ' + input2 + ' = ' + (input1 + input2) + '<br>';
+      //     break;
+      //   case '-':
+      //     console.log(input1, '-', input2, '=', input1 - input2);
+      //     str += input1 + ' - ' + input2 + ' = ' + (input1 - input2) + '<br>';
+      //     break;
+      //   case '*':
+      //     console.log(input1, '*', input2, '=', input1 * input2);
+      //     str += input1 + ' * ' + input2 + ' = ' + (input1 * input2) + '<br>';
+      //     break;
+      //   default:
+      //     console.log(input1, '/', input2, '=', input1 / input2);
+      //     str += input1 + ' / ' + input2 + ' = ' + (input1 / input2);
+      //     break;
+      // }
+      document.getElementById('output').innerHTML = str;
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2>여러개의 숫자 값과 사칙연산 기호를 한 문자열로 입력 받은 후 사칙 연산 및 계산 결과 출력</h2>
+  <h3>숫자와 연산자는 공백으로 구분되고, 계산식의 순서대로 입력과 계산이 이루어 진다. ex) 2 + 3 * 4 / 2 </h3>
+  <input id="input" type="text">
+  <button onclick="calc()" type="button">실행</button>
+  <div id='equation'></div>
+  <div id='output'></div>
+
+  <script type="text/javascript">
+    var calc = function () {
+      var input = document.getElementById('input').value;
+      document.getElementById('input').value = '';
+      var result = input.split(' ');
+      while (result.length >= 3) {
+        var equ = result.splice(0, 3);
+        if (equ[1] === '+') {
+          result.unshift(Number(equ[0]) + Number(equ[2]));
+        } else if (equ[1] === '-') {
+          result.unshift(Number(equ[0]) - Number(equ[2]));
+        } else if (equ[1] === '*') {
+          result.unshift(Number(equ[0]) * Number(equ[2]));
+        } else if (equ[1] === '/') {
+          result.unshift(Number(equ[0]) / Number(equ[2]));
+        }
+      }
+      document.getElementById('equation').innerHTML = '<br>' + '입력 연산 : ' + input;
+      document.getElementById('output').innerHTML = '계산 결과 : ' + result[0];
+    };
+  </script>
+</body>
+</html>

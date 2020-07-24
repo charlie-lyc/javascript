@@ -1,0 +1,47 @@
+<!-- 알고리즘 문제 (https://www.acmicpc.net/problem/15501)를 게임으로 구현 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen">
+    input {
+      width: 300px;
+      height: 35px;
+      font-size: 20px;
+    }
+
+    button {
+      width: 90px;
+      height: 35px;
+    }
+
+    div>button {
+      width: 45px;
+      height: 35px;
+      font-size: 25px;
+      margin: 1px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <h3>Refactoring : game 객체와 다른 객체를 생성하여 메소드와 속성을 이용해 코드를 깔끔하게 정리한다.</h3>
+  <h4>추가기능1 : 한문제 맞추면 연속해서 다음 문제 출제</h4>
+  <h4>추가기능2 : 문제를 맞출 때마다 상단에 O를 하나씩 추가</h4>
+  <h4>추가기능3 : 세문제를 맞추면 'Thank you for playing!' 문구를 표시하고 문제출제 종료</h4><br>
+  <div id='check'></div><br>
+  <div id='output1'></div><br>
+  <button onclick="game.reverseBtns()" id="reverseBtn" type="button">뒤집기</button>
+  <button onclick="game.rotateBtnsL()" id="rotateBtnL" type="button">밀어내기(L)</button>
+  <button onclick="game.rotateBtnsR()" id="rotateBtnR" type="button">밀어내기(R)</button><br><br>
+  <div id='output2'></div>
+
+  <script src="refactoring.js" charset="utf-8"></script>
+
+</body>
+
+</html>

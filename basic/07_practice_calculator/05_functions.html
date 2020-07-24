@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2>사용자 입력, 사칙연산, 출력, 메인 등의 함수로 코드를 나누어 프로그램 구현</h2>
+  <div id='equation'></div>
+  <div id='output'></div>
+
+  <script type="text/javascript">
+    // 사용자 입력 숫자 얻는 함수
+    function getValue () {
+      var val;
+      while (isNaN(val)) {
+        val = prompt("숫자 값을 입력하세요.");
+      }
+      return Number(val);
+    }
+    // 사용자 입력 연산자 얻는 함수
+    function getOperator () {
+      var oper;
+      while (true) {
+        oper = prompt("사칙연산 기호를 입력하세요.(입력종료를 원하면 'q' 또는 'quit'를 입력)");
+        if (oper === '+' || oper === '-' || oper === '*' || oper === '/' || oper === 'q' || oper === 'quit') {
+          break;
+        }
+      }
+      return oper;
+    }
+    // 입력된 숫자와 연산자에 의해 계산하는 함수
+    function calculate (val1, val2, oper) {
+      var result;
+      result = val1;
+      switch (oper) {
+        case '+':
+          result += val2;
+          break;
+        case '-':
+          result -= val2;
+          break;
+        case '*':
+          result *= val2;
+          break;
+        case '/':
+          result /= val2;
+          break;
+      }
+      return result;
+    }
+    // 계산 결과 출력 함수
+    function print (result) {
+      var string = '계산 결과 : ' + result;
+      document.getElementById('output').innerHTML = string;
+    }
+    // 실행 함수
+    function main () {
+      var equation = [];
+      var result = getValue();
+      equation.push(result);
+      while (true) {
+        var oper = getOperator();
+        if (oper === 'q' || oper === 'quit') {
+          break;
+        }
+        equation.push(oper);
+        var val = getValue();
+        equation.push(val);
+        result = calculate(result, val, oper);
+      }
+      var string = '입력 연산 : ' + equation.join(' ') + '<br>';
+      document.getElementById('equation').innerHTML = string;
+      print(result);
+    }
+    // 실행
+    main();
+  </script>
+
+</body>
+</html>

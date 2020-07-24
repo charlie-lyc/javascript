@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h3>사용자 입력 받는 객체, 사칙연산 구현 객체, 출력하는 객체를 생성하고, 메인 함수로 실행하는 프로그램 구현</h3>
+  <div id='equation'></div>
+  <div id='output'></div>
+
+  <script type="text/javascript">
+    // 사용자 입력 받는 객체 및 속성, 메소드 생성
+    var input = {};
+    input.count = 2;
+    input.getFirstValue = function() {
+      var val1;
+      while (isNaN(val1)) {
+        val1 = prompt("숫자 값을 입력하세요.");
+      }
+      return Number(val1);
+    }
+    input.getSecondValue = function() {
+      var val2;
+      while (true) {
+        val2 = prompt(this.count + "번째 숫자 값을 입력하세요.");
+        if (isNaN(val2)) {
+          continue;
+        } else {
+          this.count++;
+          break;
+        }
+      }
+      return Number(val2);
+    }
+    input.getOperator = function() {
+      var oper;
+      while (true) {
+        oper = prompt("사칙연산 기호를 입력하세요.(입력종료를 원하면 'q' 또는 'quit'를 입력)");
+        if (oper === '+' || oper === '-' || oper === '*' || oper === '/' || oper === 'q' || oper === 'quit') {
+          break;
+        }
+      }
+      return oper;
+    }
+    // 사칙연산 구현 객체 및 메소드 생성
+    var calculator = {};
+    calculator.calculate = function (val1, val2, oper) {
+      var result;
+      result = val1;
+      switch (oper) {
+        case '+':
+          result += val2;
+          break;
+        case '-':
+          result -= val2;
+          break;
+        case '*':
+          result *= val2;
+          break;
+        case '/':
+          result /= val2;
+          break;
+      }
+      return result;
+    }
+    // 출력하는 객체 및 메소드 생성
+    var output = {};
+    output.print = function (result) {
+      var string = '계산 결과 : ' + result;
+      document.getElementById('output').innerHTML = string;
+    }
+    // 실행 함수
+    function main () {
+      var equation = [];
+      var result = input.getFirstValue();
+      equation.push(result);
+      while (true) {
+        var oper = input.getOperator();
+        if (oper === 'q' || oper === 'quit') {
+          break;
+        }
+        equation.push(oper);
+        var val = input.getSecondValue();
+        equation.push(val);
+        result = calculator.calculate(result, val, oper);
+      }
+      var string = '입력 연산 : ' + equation.join(' ') + '<br>';
+      document.getElementById('equation').innerHTML = string;
+      output.print(result);
+    }
+    // 실행
+    main();
+  </script>
+
+</body>
+</html>

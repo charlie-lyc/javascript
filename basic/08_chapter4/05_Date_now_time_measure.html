@@ -1,0 +1,40 @@
+<!-- Time Measurement
+
+// 일반 버전
+var fibonacci = function (n) {
+  var result = [];
+  for (let i = 0; i < n+1; i++) {
+    if (i === 0) {
+      result[i] = 0;
+    } else if (i === 1) {
+      result[i] = 1;
+    } else {
+      result[i] = result[i-2] + result[i-1];
+    }
+  }
+  return result[n];
+};
+
+// 재귀 버전
+var recursiveFibonacci = function (n) {
+  if (n === 0) {
+    return 0;
+  } else if (n === 1) {
+    return 1;
+  } else {
+    return (recursiveFibonacci(n-2) + recursiveFibonacci(n-1));
+  }
+};
+
+// 일반 버전 시간 측정 : Global Object인 'Date'의 'now()'메소드 이용
+var t1 = Date.now();
+fibonacci(40);
+var t2 = Date.now();
+console.log(t2 - t1);
+
+// 재귀 버전 시간 측정
+var t3 = Date.now();
+recursiveFibonacci(40);
+var t4 = Date.now();
+console.log(t4 - t3);
+ -->

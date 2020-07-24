@@ -1,0 +1,52 @@
+<!-- 알고리즘 문제 (https://www.acmicpc.net/problem/15501)를 게임으로 구현 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen">
+    input {
+      width: 300px;
+      height: 35px;
+      font-size: 20px;
+    }
+
+    button {
+      width: 90px;
+      height: 35px;
+    }
+
+    div>button {
+      width: 45px;
+      height: 35px;
+      font-size: 25px;
+      margin: 1px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <h3>Time Rank : 게임 완료시간 측정과 랭킹시스템 구현</h3>
+  <h4>추가기능4 : 게임을 진행하는 동안 경과 시간을 화면에 표시한다.</h4>
+  <h4>추가기능5 : 게임을 끝내면 완료시간 표시한다.</h4>
+  <h4>추가기능6 : 랭킹보기 버튼을 추가한다. 물론, 완료시간이 짧은 사람이 랭킹이 높다.</h4>
+  <h4>추가기능7 : 1~10위에 해당하는 경우 이름을 입력 받는다.</h4><br>
+  <div id='check'></div><br>
+  <div id='output1'></div><br>
+  <button onclick="game.reverseBtns()" id="reverseBtn" type="button">뒤집기</button>
+  <button onclick="game.rotateBtnsL()" id="rotateBtnL" type="button">밀어내기(L)</button>
+  <button onclick="game.rotateBtnsR()" id="rotateBtnR" type="button">밀어내기(R)</button><br><br>
+  <div id='output2'></div><br>
+  <div id='time'></div><br>
+  <button onclick="rank.displayRanks()" id="displayRank" type="button">랭킹보기</button>
+  <button onclick="game.main()" id="gameMain" type="button">게임더하기</button><br><br>
+  <div id='rank'></div><br>
+
+  <script src="time_rank.js" charset="utf-8"></script>
+
+</body>
+
+</html>

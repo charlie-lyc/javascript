@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2>여러개의 숫자 값과 사칙연산 기호를 각각 입력 받은 후 사칙 연산 및 결과 출력</h2>
+  <h3>단, 계산식의 순서대로 입력과 연산이 이루어 진다. ex) 4 + 2 * 3 = 18</h3>
+  <div id='output'></div>
+
+  <script type="text/javascript">
+    var strings = [];
+    var result = Number(prompt("숫자 값을 입력하세요."));
+    strings.push(result);
+    while (true) {
+      var input1 = prompt("사칙연산 기호를 입력하세요.(연산자 대신 'q' 또는 'quit'를 입력하면 입력 종료)");
+      if (input1 === 'q' || input1 === 'quit') {
+        break;
+      }
+      strings.push(input1);
+      var input2 = Number(prompt("숫자 값을 입력하세요."));
+      strings.push(input2);
+      if (input1 === '+') {
+        result += input2;
+      } else if (input1 === '-') {
+        result -= input2;
+      } else if (input1 === '*') {
+        result *= input2;
+      } else if (input1 === '/'){
+        result /= input2;
+      }
+    }
+    var fullCalc = strings.join(' ');
+    var str = '<br>';
+    str += '입력한 계산식 : ' + fullCalc + '<br>';
+    str += '계산 결과    : ' + result;
+    document.getElementById('output').innerHTML = str;
+  </script>
+
+</body>
+</html>
