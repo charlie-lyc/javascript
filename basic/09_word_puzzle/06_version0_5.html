@@ -1,0 +1,50 @@
+<!-- 알고리즘 문제 (https://www.acmicpc.net/problem/15501)를 게임으로 구현 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen">
+    input {
+      width: 300px;
+      height: 35px;
+      font-size: 20px;
+    }
+
+    button {
+      background-color: 848ccf;
+      width: 90px;
+      height: 35px;
+    }
+
+    div>button {
+      width: 45px;
+      height: 35px;
+      font-size: 25px;
+      margin: 1px;
+      background-color: #848ccf;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>단어 퍼즐 게임</h2><br>
+  <div id='check'></div><br>
+  <div id='output1'></div><br>
+  <button onclick="game.reverseBtns()" id="reverseBtn" type="button">뒤집기</button>
+  <button onclick="game.rotateBtnsL()" id="rotateBtnL" type="button">밀어내기(L)</button>
+  <button onclick="game.rotateBtnsR()" id="rotateBtnR" type="button">밀어내기(R)</button><br><br>
+  <div id='output2'></div><br>
+  <div id='time'></div><br>
+  <button onclick="rank.displayRanks()" id="displayRank" type="button">랭킹보기</button>
+  <button onclick="game.main()" id="gameMain" type="button">게임더하기</button><br><br>
+  <div id='rank'></div><br>
+
+  <script src="time_rank.js" charset="utf-8"></script>
+
+</body>
+
+</html>
